@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>blog{%block title%}{%endblock title%}</title>
+     <!-- Font Awesome -->
+  <link rel="stylesheet" href="{% static 'css/all.css'%}" />
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css'%}" />
+
+  <link rel="stylesheet" href="{% static 'css/style.css'%}" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+
+
+</head>
+<body id="body-pd">
+    <!-- right bar -->
+     {% include "partials/_rightbar.html" %}
+
+     <!-- nav bar -->
+     {% include "partials/_navbar.html" %}
+
+     
+
+
+     <div class="main-container mt-5">
+    <!-- jinga template codes -->
+     {% block content %}
+     {% endblock content%}  
+     </div>
+     <!--  footer -->
+     {% include "partials/_footer.html" %}
+
+     <script src="{% static 'js/jquery-3.3.1.min.js'%} "></script>
+     <script src="{% static 'js/bootstrap.bundle.min.js'%} "></script>
+     <script src="{% static 'js/main.js' %} "></script>
+</body>
+</html>
